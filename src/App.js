@@ -24,6 +24,10 @@ class App extends React.Component {
   }
 
   addTask(task) {
+    if(task === '') {
+      return;
+    }
+
     const tasks = this.state.tasks.slice();
 
     tasks.push(task);
